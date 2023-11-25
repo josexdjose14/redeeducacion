@@ -1,0 +1,117 @@
+@import "../../assets/variables.scss";
+
+.RegisterContainer {
+  background-color: $gray_1d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: $SoraAll;
+
+  &__window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px;
+    gap: 30px;
+    background-color: white;
+    border: 5px solid $green_5d5;
+    border-radius: 50px;
+    width: 70%;
+    height: 80%;
+    position: relative;
+
+    &__text1 {
+      font-weight: bold;
+      font-size: 24;
+      width: 60%;
+      text-align: center;
+
+      & span {
+        color: $green_3d5;
+      }
+
+      height: 15%;
+    }
+
+    &__text2 {
+      font-size: 16;
+      width: 60%;
+      text-align: center;
+      height: 15%;
+    }
+
+    & form {
+      display: flex;
+      flex-wrap: wrap;
+      height: 70%;
+
+      & label {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        & input,
+        select {
+          border-radius: 20px;
+          border: 5px solid $gray_2d2;
+          height: 50px;
+          width: 80%;
+          outline: none;
+          padding-left: 10px;
+          text-align: center;
+
+          &:focus {
+            border: 5px solid $green_5d5;
+          }
+
+          &::placeholder {
+            text-align: center;
+            color: $gray_2d2;
+            font-size: 18px;
+          }
+        }
+
+        & .nextBtn {
+          border-radius: 20px;
+          border: 5px solid $green_1d5;
+          width: 80%;
+          height: 50px;
+          outline: none;
+          color: $green_1d5;
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        & .activated {
+          border: 5px solid $green_3d5;
+          color: $green_3d5;
+          cursor: pointer;
+
+          &:active {
+            background-color: $green_3d5;
+            color: white;
+          }
+        }
+
+        & span {
+          color: white;
+        }
+      }
+
+
+    }
+
+    &__back {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      cursor: pointer;
+    }
+  }
+}
